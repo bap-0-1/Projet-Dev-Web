@@ -1,0 +1,30 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/var/www/html
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=vulnerable_app
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: vulnerable_app
+    # Ne PAS publier 3306 vers l'hôte : => pas de "ports"
+    # Expose le port uniquement pour le réseau interne Docker (optionnel)
+    expose:
+      - "3306"
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./db.sql:/docker-entrypoint-initdb.d/db.sql
+
+volumes:
+  db-data:

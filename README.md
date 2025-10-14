@@ -1,3 +1,3 @@
-- Vuln easy : sqli sur le login
+- Vuln easy : blind sqli sur le login (flag a retrouver en exfiltrant la db en blind)
 - Vuln Medium : stored xss ou une de ton choix bb
 - Vuln hard : rce en blind via sqli sur login

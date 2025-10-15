@@ -1,13 +1,19 @@
-FROM php:8.2-apache
+FROM php:8.1-apache
 
-# Installation de modules nécessaires
-RUN docker-php-ext-install mysqli
+ENV DEBIAN_FRONTEND=noninteractive
 
-# Copie du code source
-COPY app/ /var/www/html/
+# Installer le serveur MySQL et extensions PHP nécessaires
+RUN apt-get update && \
+    apt-get install -y mariadb-server && \
+    docker-php-ext-install mysqli pdo_mysql && \
+    rm -rf /var/lib/apt/lists/*
 
-# Permissions laxistes volontairement vulnérables
-RUN chmod -R 777 /var/www/html
+# Copier ton code et script de démarrage
+COPY ./app /var/www/html
+COPY ./start.sh /start.sh
+COPY ./db.sql /docker-entrypoint-initdb.d/init.sql
+RUN chmod +x /start.sh
 
 EXPOSE 80
-CMD ["apache2-foreground"]
+
+CMD ["/start.sh"]

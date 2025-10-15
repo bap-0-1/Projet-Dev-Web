@@ -6,14 +6,30 @@ vulnérabilité présente dans l'application. Chaque vulnérabilité devra être
 description de son fonctionnement et de la manière dont elle peut être exploitée.
 
 
-** Présentation de l'application :**
+
+               La Banque de Smaug
+
+
+Présentation de l'application :
+Cette application web implémente une fonction de demande de prêts avec connexion par login mot de passe.
 
 
 
-** Installation :**
+Installation :
+$ git clone https://github.com/bap-0-1/Projet-Dev-Web
+$ cd Projet-Dev-Web
+$ sh ./start.sh
 
-
-** Architecture :**
+Architecture :
 Docker : 
  Serveur PHP
- Database MySQL sur MariaDB
+ Database MySQL sur MariaDB avec plugins utilisateurs customisés
+
+
+ Vulnérabilités :
+ 
+    Vuln easy : blind sqli sur le login (flag a retrouver en exfiltrant la db en blind)
+    Vuln Medium : stored xss ou une de ton choix bb
+    Vuln hard : rce en blind via sqli sur login
+
+

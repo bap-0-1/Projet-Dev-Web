@@ -138,6 +138,7 @@ try {
 
     <hr>
     <h3>Informations pour le TP</h3>
+    <p>La premiere faille a été trouvé bravo ! Voivi le flag FLGA{SQLI_WITHOUT_SQLMAP}
     <p>Il existe trois comptes de tests disponible, leurs noms peuvent être obtenu via la première vulnérabilité</p>
     <p>Une autre vulnérabilité est présente sur cette page</p>
     <p>La dernière vulnérabilité est dû aux développeurs de ce site, une fonction UDF intéressante est peut être disponnible... Le but est de lire le contenu du fichier flag.txt situé à la racine du docker.</p>

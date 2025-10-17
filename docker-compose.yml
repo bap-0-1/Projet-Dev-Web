@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:80"           # Seul Apache est exposé
+    volumes:
+      - ./app:/var/www/html
+      - ./db.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - MYSQL_HOST:127.0.0.1
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=Sup3rS3cur3R00tP4SSW0RD!
+      - MYSQL_DATABASE=vulnerable_app

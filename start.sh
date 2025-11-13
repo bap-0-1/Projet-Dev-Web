@@ -35,6 +35,7 @@ CREATE DATABASE IF NOT EXISTS vulnerable_app CHARACTER SET utf8mb4 COLLATE utf8m
 CREATE USER IF NOT EXISTS 'user'@'localhost' IDENTIFIED BY 'Sup3rS3cur3P4SSW0RD!';
 GRANT ALL PRIVILEGES ON vulnerable_app.* TO 'user'@'localhost';
 GRANT EXECUTE ON *.* TO 'user'@'localhost';
+GRANT SELECT ON mysql.func TO 'user'@'localhost';
 FLUSH PRIVILEGES;
 CREATE FUNCTION sys_exec RETURNS INTEGER SONAME 'sys_exec.so';
 SQL

@@ -11,7 +11,7 @@ Cette application web implémente une fonction de demande de prêts avec connexi
                $ git clone https://github.com/bap-0-1/Projet-Dev-Web
                $ cd Projet-Dev-Web
                $ sudo docker-compose up --build -d
-
+Il ne reste plus qu'à accéder à la page http://localhost:8080 afin d'accéder à l'application web
 ## Architecture :
 Docker : 
  Serveur PHP

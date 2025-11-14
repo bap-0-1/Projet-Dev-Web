@@ -17,12 +17,12 @@ Docker :
  Serveur PHP
  Database MySQL sur MariaDB avec plugins utilisateurs customisés
 
- Le formulaire de demande de prêts n'est utilisable que par les utilisateurs déjà enregistrés et sera automatiquement refusé car vous êtes trop pauves.
+ Le formulaire de demande de prêts n'est utilisable que par les utilisateurs déjà enregistrés et sera automatiquement refusé car vous êtes trop pauvres.
 
 
  Vulnérabilités :
-    Vuln easy : blind sqli sur le login (flag a retrouver en exfiltrant la db en blind)
-    Vuln Medium : stored xss ou une de ton choix bb
-    Vuln hard : rce en blind via sqli sur login
+    Vuln easy : Injection SQL en aveugle, le drapeau est sur la page principal de l'utilisateur authentifié
+    Vuln Medium : XSS enregistré, sans drapeau
+    Vuln hard : RCE en aveugle via l'injection SQL en aveugle de la vulnérabilité easy (appelle d'une fonction UDF de MySQL)
 
 

@@ -10,7 +10,7 @@ Cette application web implémente une fonction de demande de prêts avec connexi
         
                $ git clone https://github.com/bap-0-1/Projet-Dev-Web
                $ cd Projet-Dev-Web
-               $ sh ./start.sh
+               $ sudo docker-compose up --build -d
 
 ## Architecture :
 Docker : 

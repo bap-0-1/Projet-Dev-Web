@@ -21,8 +21,8 @@ Docker :
 
 
  Vulnérabilités :
-    Vuln easy : Injection SQL en aveugle, le drapeau est sur la page principal de l'utilisateur authentifié
-    Vuln Medium : XSS enregistré, sans drapeau
-    Vuln hard : RCE en aveugle via l'injection SQL en aveugle de la vulnérabilité easy (appelle d'une fonction UDF de MySQL)
+    Vuln easy : Injection SQL en aveugle, le drapeau est sur la page principal de l'utilisateur authentifié  
+    Vuln Medium : XSS enregistré, sans drapeau  
+    Vuln hard : RCE en aveugle via l'injection SQL en aveugle de la vulnérabilité easy (appelle d'une fonction UDF de MySQL)  
 
 
